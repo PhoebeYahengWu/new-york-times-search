@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Title from './components/Title/Title';
 import Search from './components/Search/Search';
-// import Result from './components/Result/Result';
+import Result from './components/Result/Result';
 import API from './utils/API';
 import './App.css';
 
 class App extends Component {
   state = {
-    result: {},
+    result: [],
     search: ""
   };
 
@@ -17,7 +17,6 @@ class App extends Component {
 
   searchNews = query => {
     API.search(query)
-      .then(res => console.log(res.data.response.docs))
       .then(res => this.setState({ result: res.data.response.docs }))
       .catch(err => console.log(err));
   };
@@ -45,7 +44,13 @@ class App extends Component {
         <Search value={this.state.search}
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}/>
-        {/* <Result /> */}
+        <Result 
+          result = {this.state.result}
+          // headline = {this.state.result.headline.main}
+          // author = {this.state.result.byline.original}
+          // date = {this.state.result.pub_date.substring(0, 10)}
+          // url = {this.state.result.web_url}
+        />
         </form>
       </div>
       </div>

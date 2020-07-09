@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Result() {
+function Result(props) {
     return (     
         <div className="card mt-3 mb-3">
         <div className="card-header">
@@ -8,9 +8,13 @@ function Result() {
         </div>
 
         <div id="article-section" className="card-body">
-          
-        </div>
 
+        {props.result? props.result.map(item => 
+                        <li class='list-group-item'>
+                        <strong>{item.headline.main}</strong>
+                        </li>
+                        ): <p>No news available!</p>}   
+        </div>
         </div>     
     )
 }
