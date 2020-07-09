@@ -15,7 +15,7 @@ function Search(props) {
           onChange={props.handleInputChange}
           value={props.value}
           name="search"
-          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Enter Keyword Here" />
+          autoComplete = "off" className="form-control" id="searchTerm" placeholder="Enter Another Keyword Here To Search" />
         </div>
 
         <table style={{width:"100%"}}>
