@@ -17,7 +17,6 @@ class App extends Component {
 
   searchNews = query => {
     API.search(query)
-    .then(res => console.log(res))
       .then(res => this.setState({ result: res.data.response.docs }))
       .catch(err => console.log(err));
   };
@@ -47,10 +46,6 @@ class App extends Component {
                 handleFormSubmit={this.handleFormSubmit}/>
         <Result 
           result = {this.state.result}
-          // headline = {this.state.result.headline.main}
-          // author = {this.state.result.byline.original}
-          // date = {this.state.result.pub_date.substring(0, 10)}
-          // url = {this.state.result.web_url}
         />
         </form>
       </div>
