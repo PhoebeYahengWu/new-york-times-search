@@ -1,5 +1,5 @@
 # New York Times Article Search
-![News](https://user-images.githubusercontent.com/52837649/85229306-e8d64e00-b3b6-11ea-996a-f16f090ea355.gif)
+![NYT](https://user-images.githubusercontent.com/52837649/87074942-9c2fa700-c1ed-11ea-9ddf-7e20e2a108c8.gif)
 
 ## Description
 New York Times Search Tool is an application which allows users to retrieve the top 10 most popular articles from the New York Times based on the keywords entered by the user.
@@ -16,10 +16,10 @@ New York Times Search Tool is an application which allows users to retrieve the 
 
 
 ## TechUsed
-JavaScript, Bootstrap, API, React, CSS
+React, JavaScript, Bootstrap, API, CSS
 
 ## Link
-https://phoebeyahengwu.github.io/New-York-Times-Article-Search-AJAX/
+https://new-york-times-search-tool.herokuapp.com/
 
 ## Usage
 Enter any keyword and click the search button.
