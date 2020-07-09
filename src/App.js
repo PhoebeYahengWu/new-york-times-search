@@ -21,13 +21,30 @@ class App extends Component() {
       .then(res => this.setState({ result: res.data }))
       .catch(err => console.log(err));
   };
+
+
+  handleInputChange = event => {
+    const value = event.target.value;
+    const name = event.target.name;
+    this.setState ({
+      [name]: value
+    });
+  };
+
+  handleFormSubmit = event => {
+    event.preventDefault();
+    this.searchNews(this.state.search);
+  }
+
   render() {
     return (
       <div className="container h-100">
       <Title />   
       <div className="row h-100 justify-content-center align-items-center">
         <form className="col-10">
-        <Search />
+        <Search value={this.state.search}
+                handleInputChange={this.handleInputChange}
+                handleFormSubmit={this.handleFormSubmit}/>
         <Result />
         </form>
       </div>
