@@ -17,6 +17,7 @@ class App extends Component {
 
   searchNews = query => {
     API.search(query)
+    .then(res => console.log(res))
       .then(res => this.setState({ result: res.data.response.docs }))
       .catch(err => console.log(err));
   };
