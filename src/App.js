@@ -6,6 +6,21 @@ import API from './utils/API';
 import './App.css';
 
 class App extends Component() {
+  state = {
+    search: "",
+    result: {}
+  };
+
+  componentDidMount() {
+    this.searchNews("Stock Market")
+  }
+
+  searchNews = query => {
+    API.search(query)
+      .then(res => console.log(res))
+      .then(res => this.setState({ result: res.data }))
+      .catch(err => console.log(err));
+  };
   render() {
     return (
       <div className="container h-100">
