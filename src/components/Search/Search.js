@@ -4,7 +4,7 @@ function Search(props) {
     return (
 
     <div className="card">
-        <div className="card-header">
+        <div className="card-header" style={{backgroundColor: "#f8f9fa"}}>
           <i className="far fa-list-alt"></i> Search Parameters
         </div>
 
