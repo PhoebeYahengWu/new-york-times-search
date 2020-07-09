@@ -12,7 +12,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.searchNews("Stock Market")
+    this.searchNews("China")
   }
 
   searchNews = query => {
